@@ -17,11 +17,12 @@ double f(double x, double m) {
 }
 
 double calc(double m, double t, double time = 600) {
-	double dt = 0.001;
+	double dt = 0.1;
 	double cur = 0;
 	while (cur < time) {
 		double func = f(t, m);
 		t += dt * func;
+		cout << cur << " " << t << endl;
 		cur += dt;
 	}
 	return t;
@@ -37,7 +38,7 @@ double tmix(double m1, double m2, double t1, double t2) {
 
 int main() {
 	double tA = calc(mk + ms, tmix(mk, ms, tk, ts));
-	double tV = tmix(mk, ms, calc(mk, tk), ts);
+	//double tV = tmix(mk, ms, calc(mk, tk), ts);
 
-	cout << "Anatolyi: " << tA << endl << "Vladimir: " << tV;
+	//cout << "Anatolyi: " << tA << endl << "Vladimir: " << tV;
 }
