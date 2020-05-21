@@ -39,16 +39,8 @@ int main() {
 		r.push_back(first[i + 1] - first[i]);
 		m[first[i + 1] - first[i]]++;
 	}
-	vector<int> sss;
-	for (int i = 0; i < 87; i++)
-	{
-	int c;
-	cin >> c;
-	sss.push_back(c);
-
-	}
-	for (auto i : sss) {
-		cout << i << endl;
+	for (auto i : m) {
+		cout << i.first << ' ' << i.second << endl;
 	}
 	
 	
